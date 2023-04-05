@@ -17,6 +17,7 @@ const isLocked = ref(false);
 const latestLat = ref(0);
 const latestLong = ref(0);
 const coordinates = ref<Number[][]>([]);
+const images = ref<{a:string, b:Number[]}[]>([]);
 
 
 const getLat = async function(){
@@ -61,6 +62,12 @@ const setUnlock = function(){
 const getIsMoved = function(){
     socket.emit("get_isMoved",(response : string) =>{
         isMoved.value = response.includes("is moved");
+    })
+}
+
+const getImages = function(){
+    socket.emit("webcam-capture", (response : string)=>{
+
     })
 }
 
