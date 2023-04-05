@@ -3,10 +3,10 @@
 import "leaflet/dist/leaflet.css";
 import {LCircleMarker, LMap, LPolyline, LPopup, LTileLayer} from "@vue-leaflet/vue-leaflet";
 import {onMounted, ref} from "vue";
-import {io} from "socket.io-client";
-const UDP_URL = "http://110.114.160.9:12345"
+import { io } from "socket.io-client";
+const UDP_URL = "http://127.0.0.1:12345";
 const WEBCAM_URL = "http://110.114.160.9:8080/live.mpd";
-const socket = io(UDP_URL);
+const socket = io();
 socket.on("connect", () => {
     console.log(`Connected to server ${UDP_URL}`);
 });

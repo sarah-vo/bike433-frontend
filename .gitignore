@@ -9,7 +9,7 @@ lerna-debug.log*
 
 node_modules
 .DS_Store
-dist
+../../NFS_BBG/public/bike433/server/dist
 dist-ssr
 coverage
 *.local
